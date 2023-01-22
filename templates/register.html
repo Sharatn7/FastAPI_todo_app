@@ -1,0 +1,54 @@
+{% include 'base.html' %}
+<!-- registration page -->
+<div class="container">
+    <div class="card mx-auto" style="width: 60%;">
+        <div class="card-header text-center h3">
+            Register
+        </div>
+        <div class="card-body">
+            <!-- error messages are printed if any -->
+            {% if msg %}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+            {% endif %}
+            <!-- form that takes in the user deails -->
+            <form method="POST" action="/auth/register">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" required oninput="validate(this)" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="firstname" required oninput="validate(this)" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="lastname" required oninput="validate(this)" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" required minlength="8">
+                </div>
+                <div class="form-group">
+                    <label>Verify Password</label>
+                    <input type="password" class="form-control" name="verify_password" required>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Create account</button>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="/auth">Already have an account?</a>
+        </div>
+    </div>
+</div>

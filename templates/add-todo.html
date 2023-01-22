@@ -1,0 +1,26 @@
+{% include 'base.html' %}
+<!-- Page to create a Task -->
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center h3">
+            Make a new todo
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" required oninput="validate(this)" />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="3" name="description" required
+                        oninput="validate(this)"></textarea>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Add new todo</button>
+                    <a type="button" class="btn btn-primary mx-2" href="/">Cancel </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

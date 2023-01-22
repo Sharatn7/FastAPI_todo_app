@@ -1,0 +1,22 @@
+<!-- Navbar which shows Home and Logout button if user is logged in -->
+<div>
+    <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
+        <a class="navbar-brand" style="color: white;">Todo App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                {% if user %}
+                <li class="nav-item active mx-2">
+                    <a type="button" class="btn btn-outline-light" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a type="button" class="btn btn-outline-light" href="/auth/logout">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,28 @@
+{% include 'base.html' %}
+<!-- Edit page for updating a Task -->
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center h3">
+            Let's edit your todo!
+        </div>
+        <!-- dispalying the Task details in their corresponding fields values -->
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" value="{{todo.title}}" required
+                        oninput="validate(this)" />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="description" class="form-control" rows="3" required
+                        oninput="validate(this)">{{todo.description}}</textarea>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Edit your todo</button>
+                    <a type="button" class="btn btn-primary mx-2" href="/">Cancel </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

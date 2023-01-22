@@ -1,0 +1,38 @@
+{% include 'base.html' %}
+<!-- login page -->
+<div class="container">
+    <div class="card mx-auto" style="width: 60%;">
+        <div class="card-header text-center h3">
+            Let's get going-Login!!!
+        </div>
+        <div class="card-body">
+            <!-- printing error messages if any -->
+            {% if msg %}
+            {% if msg == 'Logout Successful' or msg == 'User successfully created' %}
+            <div class="alert alert-success" role="alert">
+                {{msg}}
+            </div>
+            {% else %}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+            {% endif %}
+            {% endif %}
+            <!-- taking in login details -->
+            <form method="POST" action="/auth">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a href="register" class="btn btn-primary pill text-white mx-2">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

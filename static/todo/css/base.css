@@ -1,0 +1,51 @@
+html {
+  min-height: 100%;
+}
+
+/* body styling */
+body {
+  background-image: -moz-linear-gradient(136deg, rgb(149, 153, 226) 0%, rgb(139, 198, 236) 100%);
+  background-image: -webkit-linear-gradient(136deg, rgb(149, 153, 226) 0%, rgb(139, 198, 236) 100%);
+  background-image: -ms-linear-gradient(136deg, rgb(149, 153, 226) 0%, rgb(139, 198, 236) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #323232;
+}
+
+/* navbar color */
+.main-color {
+  background-color: black;
+}
+
+/* fixing table head and creating a scrollable table */
+.tableFixHead {
+  overflow: auto;
+  height: 67vh;
+}
+
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th {
+  background: #eee;
+}
+
+/* removing anchor tag decoration */
+.tableFixHead tbody a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
