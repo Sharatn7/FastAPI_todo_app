@@ -1,5 +1,3 @@
-# Wobot_assignment
-
 Basic To-do list based on user api done using FastAPI.
 
 ## In this application
